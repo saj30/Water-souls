@@ -1,49 +1,49 @@
-# Water-souls
-Making a water based dark souls game for a my career program, similar 2d gameplay loop to dark souls with simple rooms to traverse.
-Purify: The Flow Within – Game Logic 
+Purify: The Flow Within – Wave Survival Edition
+A wave-based survival game where the player must hold out in a single arena room against endless waves of progressively stronger enemies. Inspired by the combat intensity and challenge of Dark Souls, but focused on staying alive as long as possible to purify the corrupted zone.
+
 1. Game Start:
-The game loads with a title screen and a “Start” button.
+The game opens with a title screen and a “Start” button.
 
+Player begins in a central arena with basic stats.
 
-Player starts in a central hub with basic stats.
-
-On-screen: HP bar, XP bar, mini-map, and zone purity meter.
+On-screen UI: HP bar, XP (Purity Points) bar, Wave counter, and zone purity meter showing progress toward full purification.
 
 2. Player Actions:
 Player can move, jump, dash, and attack.
 
-They can also interact with objects or NPCs and return to the hub.
+Between waves, player can spend XP to upgrade stats or abilities.
 
-Game responds by damaging enemies, collecting XP, or opening paths.
+Game responds dynamically: damage enemies, collect XP from defeated foes, and trigger wave completion once all enemies are defeated.
 
 3. Game Logic:
-The game checks:
+The game continuously checks:
 
-If the player or enemy takes damage
+If player or enemies take damage
 
-If the player dies (respawn at checkpoint)
+If the player dies → respawn at wave 1 or last checkpoint with XP penalty
 
-If a zone is cleared (unlock next area)
+If a wave is cleared → short break to upgrade, then next wave starts automatically
 
-Beating enemies or bosses gives XP.
+Defeating enemies grants XP (Purity Points).
 
-Death results in losing some XP and restarting at the last checkpoint.
+Enemies become tougher with each wave (higher HP, new attack patterns, bosses every few waves).
 
-4. Score/Feedback:
-Score = XP (Purity Points) from enemies and exploration.
+4. Score & Feedback:
+Score = Total XP (Purity Points) earned by surviving waves.
 
-Visual feedback: splashes when hit, screen glow when upgrading.
+Visual feedback: flashes and splashes on hits, glow when leveling up.
 
-Audio feedback: hit sounds, zone-cleared fanfare, upgrade chimes.
+Audio feedback: satisfying hit sounds, wave-cleared fanfare, and upgrade chimes.
 
 5. Win/Lose Conditions:
-Win: Defeat the final boss and purify all zones.
+Win: Purify the arena by surviving a set number of waves or endure endless waves for a high score (depending on game mode).
 
-Shows ending scene and real-world clean water message.
+Ending scene shows a message about clean water and environmental awareness.
 
-Lose: Player dies → respawn at checkpoint with small XP penalty.
+Lose: Player dies → restart at the last checkpoint or from wave 1, with a slight XP penalty.
 
 6. Reset/Replay:
-Player can restart the game or replay zones from the pause menu.
+Player can restart the entire game or replay from a selected checkpoint.
 
-Replay includes harder modes and optional challenges.
+Replay options include harder enemy variants and optional survival challenges.
+
